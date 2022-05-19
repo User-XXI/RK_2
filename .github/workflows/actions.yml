@@ -32,7 +32,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info
+          lcov --remove lcov.info '/home/runner/work/RK_2/third-party/gtest/*' -o lcov.info
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
           
   CovTest:
@@ -54,31 +54,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info ###
+          lcov --remove lcov.info '/home/runner/work/RK_2/third-party/gtest/*' -o lcov.info ###
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
           
 
-      - uses: actions/checkout@master
-      - name: Use Node.js 10.x
-        uses: actions/setup-node@master
-        with:
-          version: 10.x
-
-      - name: npm install
-        run: npm install
-
-      - name: Test ${{ matrix.test_number }}
-        run: make test-coverage-${{ matrix.test_number }}
-      - name: Coveralls Parallel
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.github_token }}
-          flag-name: run-${{ matrix.test_number }}
-          parallel: true
-
-
-      - name: Coveralls Finished
-        uses: coverallsapp/github-action@master
-        with:
-          github-token: ${{ secrets.github_token }}
-          parallel-finished: true
