@@ -10,7 +10,7 @@ jobs:
         - name: build bubble_sort
           shell: bash
           run: |
-            cd cd bubble_sort   
+            cd bubble_sort   
             cmake -H. -B_build
             cmake --build _build
           
