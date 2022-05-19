@@ -22,3 +22,4 @@ endif()
 target_include_directories(RunTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
 
 target_link_libraries(RunTest PRIVATE gtest gtest_main gmock_main bubble_sort)
+
