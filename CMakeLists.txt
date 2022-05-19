@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.4)
 set(CMAKE_CXX_STANDARD 17)
 
 project(RK_2)
@@ -8,7 +8,7 @@ SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
 
 project(TestRunning)
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third-party/"gtest")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third-party/gtest" "gtest")
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
 
