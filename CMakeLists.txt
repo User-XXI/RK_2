@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.4)
 
 SET(COVERAGE OFF CACHE BOOL "Coverage")
 SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
