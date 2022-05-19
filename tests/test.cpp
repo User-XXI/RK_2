@@ -3,11 +3,6 @@
 #include <gmock/gmock.h>
 #include "../bubble_sort/bubble_sort.h"
 
-
-struct MockAcc : public bubble_sort{
-    bubble_sort(T *array, int size) : bubble_sort(*array, size){}
-};
-
 TEST(Sort, bubble) 
 {
   double array[] = { 5, 3, 3.5, 7, 4, 9, 2, -1 };
