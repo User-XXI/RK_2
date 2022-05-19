@@ -6,12 +6,11 @@ jobs:
   Build:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: build bubble_sort
           shell: bash
           run: |
-            git submodule add https://github.com/google/googletest third-party/gtest
-            export CXX=/usr/bin/g++    
+            cd cd bubble_sort   
             cmake -H. -B_build
             cmake --build _build
           
