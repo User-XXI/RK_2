@@ -10,6 +10,7 @@ jobs:
         - name: build bubble_sort
           shell: bash
           run: |
+            git submodule add https://github.com/google/googletest third-party/gtest
             export CXX=/usr/bin/g++    
             cmake -H. -B_build -DBUILD_TESTS=ON
             cmake --build _build
