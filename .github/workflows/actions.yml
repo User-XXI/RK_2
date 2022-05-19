@@ -11,6 +11,7 @@ jobs:
         - name: build bubble_sort
           shell: bash
           run: |
+            export CXX=/usr/bin/g++    
             cmake -H. -B_build
             cmake --build _build
           
