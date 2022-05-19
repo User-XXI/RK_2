@@ -8,7 +8,7 @@ SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
 
 project(TestRunning)
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third-party/gtest" "gtest")
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third-party/"gtest")
 
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
 
