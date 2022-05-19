@@ -12,7 +12,7 @@ jobs:
           run: |
             git submodule add https://github.com/google/googletest third-party/gtest
             export CXX=/usr/bin/g++    
-            cmake -H. -B_build -DBUILD_TESTS=ON
+            cmake -H. -B_build
             cmake --build _build
           
   Testing:
