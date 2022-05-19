@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 3.22)
 
-project(RK_2)
-
 SET(COVERAGE OFF CACHE BOOL "Coverage")
 SET(CMAKE_CXX_COMPILER "/usr/bin/g++")
 
@@ -21,4 +19,3 @@ endif()
 target_include_directories(RunTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
 
 target_link_libraries(RunTest PRIVATE gtest gtest_main gmock_main bubble_sort)
-
