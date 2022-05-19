@@ -32,7 +32,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info
+          lcov --remove lcov.info '/home/runner/work/main/main/third-party/gtest/*' -o lcov.info
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
           
   CovTest:
@@ -54,7 +54,7 @@ jobs:
           cmake --build .
           ./RunTest
           lcov -t "banking" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info ###
+          lcov --remove lcov.info '/home/runner/work/main/main/third-party/gtest/*' -o lcov.info ###
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
           
       - name: Coveralls
