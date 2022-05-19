@@ -1,18 +1,17 @@
 name: RK2_test
-
 on:
   push:
-
+  
 jobs:
   Build:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v2
         - name: build bubble_sort
           shell: bash
           run: |
             export CXX=/usr/bin/g++    
-            cmake -H. -B_build
+            cmake -H. -B_build -DBUILD_TESTS=ON
             cmake --build _build
           
   Testing:
