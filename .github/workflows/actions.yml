@@ -10,6 +10,7 @@ jobs:
         - name: build bubble_sort
           shell: bash
           run: |
+            git submodule update --init
             cd bubble_sort   
             cmake -H. -B_build
             cmake --build _build
