@@ -1,5 +1,4 @@
 #include <iostream>
-#include <gtest/gtest.h>
 #include <gmock/gmock.h>
 #include "../bubble_sort/bubble_sort.h"
 
